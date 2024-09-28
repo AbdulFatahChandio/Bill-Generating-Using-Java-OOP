@@ -1,0 +1,56 @@
+
+package pizza.bill.using.java;
+public class Pizza { //pizza class
+     private int price;
+     private Boolean veg;
+     private int extraCheesePrice = 100;
+     private int extraToppingsPrice = 150;
+     private int bagPack = 20;
+     private int basePizzaPrice;
+     private boolean isExtracheeseAdded = false;
+     private boolean isExtraToppingsAdded = false;
+     private boolean isOptForTakeAway =false;
+     
+    
+    public Pizza(Boolean veg){ //Constructor of class Pizza 
+        this.veg = veg;
+        if(this.veg){ //
+            this.price=300;
+        }else{
+            this.price = 400;
+        }
+        basePizzaPrice = this.price;
+    }
+
+    public void addExtraCheese(){
+        isExtracheeseAdded =true;
+       this.price +=extraCheesePrice;
+       
+        
+    }
+    public void addExtraToppings(){
+        isExtraToppingsAdded = true;
+       this.price +=extraToppingsPrice;
+    }
+    public void takeAway(){
+        isOptForTakeAway = true;
+       this.price +=bagPack;
+    }
+    public void getBill(){
+        System.out.println("\n** Welcome To Abdul Fatah Pizza Point **\n");
+            String bill = "";
+          System.out.println("    Pizza Price          :"+basePizzaPrice);
+          if(isExtracheeseAdded){
+              bill += "    Extra Cheese added   :"+extraCheesePrice+ "\n";
+          }
+          if(isExtraToppingsAdded){
+              bill += "    Extra Toppings added :"+extraToppingsPrice+ "\n";
+          }
+          if(isOptForTakeAway){
+              bill += "    Take Away            :"+bagPack+ "\n";
+          }
+          bill +="\n    Total Bill Price     :"+this.price+"\n";
+          System.out.println(bill);
+          
+    }
+}
