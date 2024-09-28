@@ -1,0 +1,16 @@
+
+package pizza.bill.using.java;
+public class PizzaBillUsingJava {
+    public static void main(String[] args) {
+        Pizza basePizza = new Pizza(false);
+  //Here true = veg pizza = 300
+  //Here false  = non-veg pizza = 400
+  
+        basePizza.addExtraToppings();
+        basePizza.addExtraCheese();
+        basePizza.takeAway();
+        basePizza.getBill();
+        
+    }
+    
+}
