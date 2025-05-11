@@ -48,7 +48,7 @@ class Laptop {
         this.price +=newWindow;
     }
     public void getLaptopBill(){
-        System.out.println("\n** Welcome To Abdul Fatah Tecno Shop **\n");
+        System.out.println("\n** Welcome To Abdul Fatah Tech Shop**\n");
         String bill = "";
         System.out.println("Laptop Price               :" +finalPrice);
         if(isExtra2GbRamAdded){
